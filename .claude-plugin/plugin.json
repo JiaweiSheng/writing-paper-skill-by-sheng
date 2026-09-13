@@ -1,0 +1,20 @@
+{
+  "name": "writting-paper-skill-by-sheng",
+  "version": "1.0.0",
+  "description": "Draft and revise evidence-grounded English CS research papers in Jiawei Sheng's problem-mechanism-evidence style.",
+  "author": {
+    "name": "JiaweiSheng",
+    "url": "https://github.com/JiaweiSheng"
+  },
+  "homepage": "https://github.com/JiaweiSheng/writting-paper-skill-by-sheng",
+  "repository": "https://github.com/JiaweiSheng/writting-paper-skill-by-sheng",
+  "license": "MIT",
+  "keywords": [
+    "paper-writing",
+    "academic-writing",
+    "machine-learning",
+    "computer-science",
+    "knowledge-graphs",
+    "nlp"
+  ]
+}

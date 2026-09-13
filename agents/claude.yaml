@@ -1,0 +1,3 @@
+frontmatter:
+  user-invocable: true
+  argument-hint: "[draft, outline, results, or revision notes]"

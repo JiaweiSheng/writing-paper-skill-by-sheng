@@ -1,0 +1,7 @@
+interface:
+  display_name: "Writing Paper by Sheng"
+  short_description: "Draft evidence-grounded CS research papers"
+  default_prompt: "Use $writting-paper-skill-by-sheng to draft or revise this research-paper section while preserving technical meaning and calibrating every claim to the available evidence."
+
+policy:
+  allow_implicit_invocation: true
