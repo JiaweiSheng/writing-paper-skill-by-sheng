@@ -1,5 +1,5 @@
 {
-  "name": "writting-paper-skill-by-sheng",
+  "name": "writing-paper-skill-by-sheng",
   "owner": {
     "name": "JiaweiSheng",
     "url": "https://github.com/JiaweiSheng"
@@ -10,7 +10,7 @@
   },
   "plugins": [
     {
-      "name": "writting-paper-skill-by-sheng",
+      "name": "writing-paper-skill-by-sheng",
       "source": "./",
       "description": "Draft and revise evidence-grounded English CS research papers in Sheng's writing style."
     }

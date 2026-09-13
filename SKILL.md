@@ -1,12 +1,12 @@
 ---
-name: writting-paper-skill-by-sheng
+name: writing-paper-skill-by-sheng
 description: >-
   Drafts and revises evidence-grounded English computer-science research papers
   using Jiawei Sheng's problem-mechanism-evidence style. Use for abstracts,
   introductions, related work, methods, experiments, conclusions, full-paper
   consistency, and reviewer-oriented revision, especially in AI, NLP, IR,
   knowledge graphs, recommendation, graph learning, and multimodal learning.
-  Use for 写论文, 润色论文, 按我的风格写, paper writing, or writting-paper-skill-by-sheng.
+  Use for 写论文, 润色论文, 按我的风格写, paper writing, or writing-paper-skill-by-sheng.
   Do not use for scientific peer review, literature discovery, citation
   verification, or submission-format auditing as the primary task.
 license: MIT

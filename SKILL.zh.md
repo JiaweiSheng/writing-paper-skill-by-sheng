@@ -4,7 +4,7 @@
 
 | 字段 | 内容 |
 | --- | --- |
-| 名称 | `writting-paper-skill-by-sheng` |
+| 名称 | `writing-paper-skill-by-sheng` |
 | 说明 | 按 Jiawei Sheng 的问题-机制-证据写法，起草或改写有证据支撑的英文计算机科研论文。用于摘要、引言、相关工作、方法、实验、结论、全文一致性，以及面向审稿人的改写；尤其适用于 AI、NLP、IR、知识图谱、推荐、图学习与多模态。触发词包括：写论文、润色论文、按我的风格写、paper writing。不要把科学审稿、文献发现、引用核验或投稿格式检查作为主任务。 |
 | 许可证 | MIT |
 | 兼容性 | 任何支持 Agent Skills 的 Agent，包括 Cursor、Codex、Claude Code |

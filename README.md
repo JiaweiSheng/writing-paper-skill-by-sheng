@@ -1,9 +1,9 @@
-# writting-paper-skill-by-sheng
+# writing-paper-skill-by-sheng
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Agent Skills](https://img.shields.io/badge/Agent%20Skills-Cursor%20%7C%20Codex%20%7C%20Claude%20Code-0A7A3E.svg)](https://agentskills.io)
 
-按参考论文中的问题-机制-证据论证习惯，起草或改写英文计算机科研论文。仓库与 Skill 名称均为 `writting-paper-skill-by-sheng`。给定任务、方法、证据或已有草稿后，默认按这条可追溯论证链写作：
+按参考论文中的问题-机制-证据论证习惯，起草或改写英文计算机科研论文。仓库与 Skill 名称均为 `writing-paper-skill-by-sheng`。给定任务、方法、证据或已有草稿后，默认按这条可追溯论证链写作：
 
 ```text
 task and setting -> observed limitation -> causal mechanism -> design principle
@@ -20,11 +20,11 @@ task and setting -> observed limitation -> causal mechanism -> design principle
 
 | 平台 | 安装位置 | 额外文件 |
 | --- | --- | --- |
-| Cursor | `~/.cursor/skills/writting-paper-skill-by-sheng` | 无 |
-| Codex | `~/.codex/skills/writting-paper-skill-by-sheng` | `agents/openai.yaml`、`.codex-plugin/` |
-| Claude Code | `~/.claude/skills/writting-paper-skill-by-sheng` 或插件市场 | `agents/claude.yaml`、`.claude-plugin/` |
+| Cursor | `~/.cursor/skills/writing-paper-skill-by-sheng` | 无 |
+| Codex | `~/.codex/skills/writing-paper-skill-by-sheng` | `agents/openai.yaml`、`.codex-plugin/` |
+| Claude Code | `~/.claude/skills/writing-paper-skill-by-sheng` 或插件市场 | `agents/claude.yaml`、`.claude-plugin/` |
 
-仓库名、Skill 名称与安装目录均为 `writting-paper-skill-by-sheng`，与 `SKILL.md` 中的 `name` 字段一致。
+仓库名、Skill 名称与安装目录均为 `writing-paper-skill-by-sheng`，与 `SKILL.md` 中的 `name` 字段一致。
 
 `SKILL.md` 只保留可移植字段：`name`、`description`、`license`、`compatibility`、`metadata`。Cursor 的 `disable-model-invocation`、Claude 的 `user-invocable`、Codex 的界面文案都不写入该文件。
 
@@ -49,15 +49,15 @@ task and setting -> observed limitation -> causal mechanism -> design principle
 ### Cursor
 
 ```bash
-rsync -a --delete ./ ~/.cursor/skills/writting-paper-skill-by-sheng/
+rsync -a --delete ./ ~/.cursor/skills/writing-paper-skill-by-sheng/
 ```
 
-安装完成后，请新开 Agent 对话。也可通过 `/writting-paper-skill-by-sheng` 手动调用，并在 **Customize -> Skills** 中确认其位于 **Agent Decides**。
+安装完成后，请新开 Agent 对话。也可通过 `/writing-paper-skill-by-sheng` 手动调用，并在 **Customize -> Skills** 中确认其位于 **Agent Decides**。
 
 ### Codex
 
 ```bash
-rsync -a --delete ./ ~/.codex/skills/writting-paper-skill-by-sheng/
+rsync -a --delete ./ ~/.codex/skills/writing-paper-skill-by-sheng/
 ```
 
 Codex 读取 `SKILL.md` 以及 `agents/openai.yaml` 中的显示名称、简介与默认提示。
@@ -65,20 +65,20 @@ Codex 读取 `SKILL.md` 以及 `agents/openai.yaml` 中的显示名称、简介�
 ### Claude Code
 
 ```bash
-rsync -a --delete ./ ~/.claude/skills/writting-paper-skill-by-sheng/
+rsync -a --delete ./ ~/.claude/skills/writing-paper-skill-by-sheng/
 ```
 
 或通过插件市场安装：
 
 ```text
 /plugin marketplace add <this-repo>
-/plugin install writting-paper-skill-by-sheng
+/plugin install writing-paper-skill-by-sheng
 ```
 
 ## 使用示例
 
 ```text
-用 writting-paper-skill-by-sheng 按我的风格写引言
+用 writing-paper-skill-by-sheng 按我的风格写引言
 
 帮我润色这段 Abstract，不要改技术含义
 

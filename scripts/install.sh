@@ -2,11 +2,11 @@
 set -euo pipefail
 
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
-NAME="writting-paper-skill-by-sheng"
+NAME="writing-paper-skill-by-sheng"
 
 usage() {
   cat <<'EOF'
-Install writting-paper-skill-by-sheng for local agents.
+Install writing-paper-skill-by-sheng for local agents.
 
 Usage:
   ./scripts/install.sh            # install to every detected agent
@@ -101,10 +101,15 @@ if [[ "$installed" -eq 0 ]]; then
   exit 1
 fi
 
-# Remove the previous Cursor-only name to avoid duplicate discovery.
-if [[ -d "$HOME/.cursor/skills/writing-paper-by-sheng" ]]; then
-  rm -rf "$HOME/.cursor/skills/writing-paper-by-sheng"
-  echo "Removed leftover ~/.cursor/skills/writing-paper-by-sheng"
-fi
+# Remove previous names to avoid duplicate discovery.
+for leftover in writing-paper-by-sheng writting-paper-skill-by-sheng; do
+  for agent in .cursor .codex .claude; do
+    dest="$HOME/$agent/skills/$leftover"
+    if [[ -d "$dest" ]]; then
+      rm -rf "$dest"
+      echo "Removed leftover $dest"
+    fi
+  done
+done
 
 echo "Done. Start a new agent chat before using the skill."
