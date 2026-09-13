@@ -13,6 +13,7 @@ Usage:
   ./scripts/install.sh --cursor
   ./scripts/install.sh --codex
   ./scripts/install.sh --claude
+  ./scripts/install.sh --agents
   ./scripts/install.sh --all      # install even if the agent dir is missing
 EOF
 }
@@ -36,22 +37,26 @@ install_one() {
 want_cursor=0
 want_codex=0
 want_claude=0
+want_agents=0
 force_all=0
 
 if [[ $# -eq 0 ]]; then
   want_cursor=1
   want_codex=1
   want_claude=1
+  want_agents=1
 else
   for arg in "$@"; do
     case "$arg" in
       --cursor) want_cursor=1 ;;
       --codex) want_codex=1 ;;
       --claude) want_claude=1 ;;
+      --agents) want_agents=1 ;;
       --all)
         want_cursor=1
         want_codex=1
         want_claude=1
+        want_agents=1
         force_all=1
         ;;
       -h|--help)
@@ -96,6 +101,15 @@ if [[ "$want_claude" -eq 1 ]]; then
   fi
 fi
 
+if [[ "$want_agents" -eq 1 ]]; then
+  if [[ "$force_all" -eq 1 || -d "$HOME/.agents" ]]; then
+    install_one "$HOME/.agents/skills/$NAME"
+    installed=1
+  else
+    echo "Skip Agent Skills: ~/.agents not found"
+  fi
+fi
+
 if [[ "$installed" -eq 0 ]]; then
   echo "No agent skill directory was installed." >&2
   exit 1
@@ -103,7 +117,7 @@ fi
 
 # Remove previous names to avoid duplicate discovery.
 for leftover in writing-paper-by-sheng writting-paper-skill-by-sheng; do
-  for agent in .cursor .codex .claude; do
+  for agent in .cursor .codex .claude .agents; do
     dest="$HOME/$agent/skills/$leftover"
     if [[ -d "$dest" ]]; then
       rm -rf "$dest"

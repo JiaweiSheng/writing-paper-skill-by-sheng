@@ -23,6 +23,7 @@ task and setting -> observed limitation -> causal mechanism -> design principle
 | Cursor | `~/.cursor/skills/writing-paper-skill-by-sheng` | 无 |
 | Codex | `~/.codex/skills/writing-paper-skill-by-sheng` | `agents/openai.yaml`、`.codex-plugin/` |
 | Claude Code | `~/.claude/skills/writing-paper-skill-by-sheng` 或插件市场 | `agents/claude.yaml`、`.claude-plugin/` |
+| Agent Skills | `~/.agents/skills/writing-paper-skill-by-sheng` | `.agents/plugins/` |
 
 仓库名、Skill 名称与安装目录均为 `writing-paper-skill-by-sheng`，与 `SKILL.md` 中的 `name` 字段一致。
 
@@ -36,7 +37,7 @@ task and setting -> observed limitation -> causal mechanism -> design principle
 ./scripts/install.sh
 ```
 
-脚本会把同一套 skill 安装到本机已存在的 Cursor、Codex、Claude Code 目录。安装完成后，请新开对话再使用。
+脚本会把同一套 skill 安装到本机已存在的 Cursor、Codex、Claude Code、Agent Skills 目录。安装完成后，请新开对话再使用。
 
 只安装某一个平台：
 
@@ -44,6 +45,7 @@ task and setting -> observed limitation -> causal mechanism -> design principle
 ./scripts/install.sh --cursor
 ./scripts/install.sh --codex
 ./scripts/install.sh --claude
+./scripts/install.sh --agents
 ```
 
 ### Cursor
