@@ -87,7 +87,7 @@ Across the source corpus, the most recurrent families are problem contrast
 `Therefore`), method introduction (`To this end`, `To address ...`, `we
 propose`), and operation/result linkage (`In this way`). Addition markers
 (`Besides`, `Moreover`, `Furthermore`) also recur but are more sensitive to
-venue and coauthor style. Treat this as a relative profile, not a quota.
+venue and paper-to-paper variation. Treat this as a relative profile, not a quota.
 
 ### Task or scope transition
 

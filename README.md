@@ -3,7 +3,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Agent Skills](https://img.shields.io/badge/Agent%20Skills-Cursor%20%7C%20Codex%20%7C%20Claude%20Code-0A7A3E.svg)](https://agentskills.io)
 
-按 Jiawei Sheng 一作/通讯论文的论证习惯，起草或改写英文计算机科研论文。仓库与 Skill 名称均为 `writting-paper-skill-by-sheng`。给定任务、方法、证据或已有草稿后，默认按这条可追溯论证链写作：
+按参考论文中的问题-机制-证据论证习惯，起草或改写英文计算机科研论文。仓库与 Skill 名称均为 `writting-paper-skill-by-sheng`。给定任务、方法、证据或已有草稿后，默认按这条可追溯论证链写作：
 
 ```text
 task and setting -> observed limitation -> causal mechanism -> design principle
