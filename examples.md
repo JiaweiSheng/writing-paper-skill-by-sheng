@@ -128,6 +128,27 @@ mainly in this setting, indicating that [module] is not a generic
 add-on.
 ```
 
+## Results Paragraph
+
+Weak:
+
+```text
+Table 2 shows the results. Our method achieves the best results on all
+datasets. The baselines perform worse.
+```
+
+Enumerated-observation revision (when there are 2-4 distinct patterns):
+
+```text
+From Table 2, we can observe that: (1) [METHOD] outperforms all
+[paradigm] baselines on [scope], indicating that [axis A] carries
+information the baselines discard. (2) The margin widens on [diagnostic
+subset], which matches the claim that [mechanism] matters most when
+[condition]. (3) [Baseline] remains competitive on [metric]; the reason
+might be that [bounded explanation], while [METHOD] still leads on
+[metric].
+```
+
 ## Conclusion
 
 Weak:

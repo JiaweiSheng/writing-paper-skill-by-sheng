@@ -44,7 +44,14 @@ they explain why the setting matters.
 
 Use a figure, example, statistic, or concise scenario when it exposes a failure
 that abstract prose cannot. The example must be drawable, technically faithful,
-and reused later in the motivation. Define unfamiliar terms at first use.
+and reused later in the motivation. Define unfamiliar terms at first use. When
+the paper's premise is that a condition is common, quantify it on the actual
+benchmark (the share of sentences, pairs, or types affected) or report a small
+pilot experiment showing that current methods degrade under it; several corpus
+papers do this and it is the strongest form of motivation. A paradigm schematic
+that places the existing paradigm(s) beside the proposed one is a common
+companion figure when the contribution is a change of paradigm rather than a
+new module.
 
 Create a mechanism-based taxonomy only when it clarifies the gap. For each
 group, state its shared idea, acknowledge what it handles well, and identify the
@@ -58,28 +65,53 @@ property. Hedge when the cause has not been directly established.
 Explain the conceptual change before listing architecture: a decomposition,
 conditioning relation, information criterion, causal view, optimization target,
 or structural prior. An analogy is optional and should reduce cognitive load.
-Then name the method once, introduce components in dependency order, and connect
-each to one stated need.
+Where the problem genuinely splits into two or three parallel axes (kinds of
+information, correlation, or failure), name them here with fixed labels; the
+Method, contributions, and ablations will reuse them (see the style guide on
+parallel axes). Then pivot explicitly from idea to instantiation (`To achieve
+the above idea, we propose METHOD` / `Following the above idea, ...`), name the
+method once, introduce components in dependency order, and connect each to one
+stated need.
 
-Usually contributions cover a problem/formulation or finding, a method/mechanism,
-and evidence. Merge overlapping contributions. Each bullet should answer what is
-new, why it matters, and where it is substantiated. Do not count paper
-organization, routine implementation, or “extensive experiments” alone as a
-scientific contribution.
+The corpus default is three bullets in a fixed order: (1) the perspective,
+formulation, or finding, often with a bounded first-to claim (`To our
+knowledge, we are the first to ...`); (2) the framework and its named
+components, each tied to one axis of the problem; (3) the empirical evidence,
+stating the evaluation scope and the diagnostic finding (`... on 14 KGs in 3
+benchmarks, with sustained gains in low-resource settings`). Keep the evidence
+bullet, but make it carry scope and a specific finding rather than “extensive
+experiments” alone. Merge overlapping contributions and never split one idea
+to reach three; a fourth bullet is justified only by a separate result such
+as a theorem, not by listing components apart from the framework. Each bullet should answer what is new, why it matters, and where it is
+substantiated. Do not count paper organization or routine implementation as a
+contribution.
 
 ## Background and Preliminaries
 
 Include only concepts and notation used later. Define the problem with inputs,
-outputs, assumptions, and evaluation target. For borrowed theory, explain the
-specific role it will play; do not reproduce a textbook survey. Use a notation
-table only when symbol density justifies it.
+outputs, assumptions, and evaluation target. When the method rests on a borrowed
+formal tool, the corpus default is a two-part Preliminaries: a task formulation
+that opens with `Formally, given ...` and fixes the symbols the Method will
+reuse, followed by the tool (information bottleneck, optimal transport, causal
+effects, a differential equation, diffusion) presented in its general form with
+the role it will play, so that the Method only has to specialize it. Do not
+reproduce a textbook survey. Use a notation table only when symbol density
+justifies it.
 
 ## Related Work
 
 Group by research question, assumption, representation, or mechanism. Within a
 group, synthesize similarities and meaningful differences instead of assigning
 one sentence per citation. End each subsection with the unresolved issue relevant
-to this paper, then state the paper's contrast narrowly.
+to this paper, then state the paper's contrast narrowly (`In contrast, ...`,
+`Unlike ..., we ...`, `Distinct from ..., our ...`).
+
+The corpus default has two parts. The first covers the task's own literature,
+grouped into the paradigms the Introduction named, and closes on the shared
+gap. A common second part covers either the borrowed technique in its home
+fields or the same problem in neighboring tasks, and closes by stating why none
+of it transfers directly and what this paper is the first to bring to the task.
+That second part is where a bounded first-to claim belongs, if anywhere.
 
 Keep Introduction and Related Work complementary: the Introduction contains only
 the closest work required to derive the gap; Related Work provides coverage and
@@ -100,9 +132,13 @@ For each substantive component, explain:
 5. why that operation can provide the desired property;
 6. how it connects to the next component.
 
-Before an equation, state its scientific role. After it, define every new symbol
-and interpret the operation. Dimensions, normalization, signs, ranges, and
-optimization direction should be recoverable when non-obvious.
+Open each component subsection by restating the local limitation it answers, in
+the same axis labels the Introduction used, then the design. Before an equation,
+state its scientific role, typically with `Formally, ...` after an intuitive
+sentence. After it, define every new symbol and interpret the operation.
+Dimensions, normalization, signs, ranges, and optimization direction should be
+recoverable when non-obvious. Use `Note that ...` for scoping caveats and for
+the one-sentence difference from a cited design that the component adapts.
 
 Name modules and losses by function rather than fashionable adjectives. Put the
 joint objective after its terms have been motivated. Distinguish train-time and
@@ -116,15 +152,21 @@ Design the narrative around claims, not table order.
   selection, metrics, tuning, seeds, hardware when relevant, and whether baseline
   numbers are reproduced, rerun, or cited.
 - **Main comparison:** report robust patterns before isolated numbers and explain
-  how they align or conflict with the proposed mechanism.
+  how they align or conflict with the proposed mechanism. The corpus often
+  writes this as an enumerated observation list (`We can observe that: (1) ...
+  (2) ...`), one item per pattern with its reason.
 - **Diagnostic evaluation:** test the condition where the claimed limitation
   should matter, such as scarcity, noise, overlap, long tails, modality imbalance,
   domain shift, or scale. Use only a task-appropriate condition.
 - **Ablation and alternatives:** map each controlled removal or replacement to a
-  component and claim. Test interactions where necessary.
-- **Further analysis:** add uncertainty, sensitivity, complexity, runtime, memory,
-  cases, or errors according to the claims. Discuss anomalous results and label
-  speculative explanations.
+  component and claim, and keep the two kinds distinct in naming: `w/o X`
+  removes a component, `repl. X` replaces it with the conventional alternative
+  it was designed to improve on. Test interactions where necessary.
+- **Further analysis:** the corpus default is a block of `Impact of X` /
+  `Analysis on X` subsections: hyper-parameter sensitivity (present in most
+  papers), behavior as the diagnostic variable changes, and, when the claims
+  call for them, efficiency or complexity, a case study, or an error analysis.
+  Discuss anomalous results and label speculative explanations.
 
 Avoid treating rank alone as explanation or inferring necessity from one noisy
 ablation drop.
