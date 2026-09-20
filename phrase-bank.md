@@ -13,9 +13,10 @@ lookup, not the primary style specification.
 
 - `X aims to infer / identify / predict ...`
 - `X seeks to predict ... by leveraging ...`
-- `Generally, X aims at ...`
+- `In general, X aims to ...` (older papers: `Generally, X aims at ...`)
 - `This paper focuses on ... , a practical task that ...`
 - `Here, we use the term X to generally denote ...`
+- `Formally, given ..., the goal is to ...`
 
 ## Prior Art
 
@@ -43,16 +44,22 @@ lookup, not the primary style specification.
 - `To address the above issues, we propose ..., termed METHOD.`
 - `Our key insight is to treat ... as ...`
 - `Following the above idea, we propose METHOD.`
+- `To achieve the above idea, we propose METHOD, namely ...`
 - `Unlike previous studies that regard ... as ..., we ...`
 
 ## Mechanism
 
 - `Particularly / Specifically / In particular, ...`
+- `Intuitively, ... Formally, ...`
 - `We first ... and then ...`
 - `We devise ... to ...`
 - `We further devise / introduce ...`
+- `Following previous studies [refs], we adopt ... as ...`
+- `For implementation, we ...`
 - `conditioned on ...`
 - `In this design, ...`
+- `Note that ..., which differs from [cited design] in ...`
+- `For simplicity, we omit ...`
 - `As such, ...`
 - `This naturally ...`
 
@@ -62,7 +69,12 @@ lookup, not the primary style specification.
 - `Empirical results demonstrate the effectiveness of ...`
 - `with sustained gains in low-resource / overlapping / noisy settings`
 - `The best result is bold-faced and the runner-up is underlined.`
+- `From Table X, we can observe that: (1) ... (2) ... (3) ...`
 - `The gains are more pronounced when ...`
+- `The reason might be that ...` / `We assume that ...` (one anomaly, one sentence)
+- `w/o X` (component removed), `repl. X` (component replaced by the
+  conventional alternative)
+- `Impact of X` / `Analysis on X` (analysis subsection titles)
 
 ## Contribution Openers
 

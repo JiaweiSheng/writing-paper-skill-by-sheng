@@ -105,8 +105,11 @@ The following are characteristic defaults, not universal requirements:
   Do not manufacture a hard setting merely to match the style.
 - A compact abstract often needs 6-8 rhetorical moves, but sentence count and
   ordering depend on venue, length, and technical complexity.
-- Contribution count follows real contributions, usually 2-4. Never split one
-  idea into artificial bullets.
+- Contributions default to three bullets in the corpus: perspective or
+  formulation, framework with named components, and evidence with its scope
+  and diagnostic finding. Keep that shape when the paper has those three
+  things; never split one idea into artificial bullets, and add a fourth only
+  for a separate theoretical result.
 
 ### Keep claims proportional to evidence
 
@@ -134,13 +137,17 @@ claim or question -> mechanism/reason -> consequence/evidence -> transition
 
 Prefer concrete scientific subjects: the task, data, representation, module,
 constraint, or result. Use `we` for author choices and contributions. Use `this
-paper` sparingly. Define a term once, keep one label for it, and avoid swapping
-near-synonyms for variety.
+paper` in its two customary slots, the focus statement of the Introduction
+(`This paper focuses on ...`) and the opening of the Conclusion (`This paper
+addresses ...`), and sparingly elsewhere. Define a term once, keep one label for
+it, and avoid swapping near-synonyms for variety.
 
-Characteristic moves include task-first openings, fair prior-art contrast,
-named mechanisms, motivation before equations, and results interpreted through
-the paper's claimed mechanism. They should remain natural rather than become
-verbal signatures repeated in every paragraph.
+Characteristic moves include task-first openings, fair prior-art contrast, two
+or three named problem axes that recur from the Introduction to the ablations,
+named mechanisms, `Formally,` before formal statements, motivation before
+equations, and results interpreted through the paper's claimed mechanism. They
+should remain natural rather than become verbal signatures repeated in every
+paragraph.
 
 The recognizable rhythm is **controlled contrast followed by constructive
 resolution**: establish what existing methods achieve, isolate what remains,

@@ -83,18 +83,23 @@ Choose a connective only after identifying the logical relation. Do not rotate
 connectives merely to create variety.
 
 Across the source corpus, the most recurrent families are problem contrast
-(`However`), mechanism elaboration (`Specifically`), inference (`Thus` and
-`Therefore`), method introduction (`To this end`, `To address ...`, `we
-propose`), and operation/result linkage (`In this way`). Addition markers
-(`Besides`, `Moreover`, `Furthermore`) also recur but are more sensitive to
-venue and paper-to-paper variation. Treat this as a relative profile, not a quota.
+(`However`, in every paper), mechanism elaboration (`Specifically`,
+`Particularly`), formalization (`Formally,`, in 14 of 15 papers), inference
+(`Therefore`; `Thus` is rare), method introduction (`To this end`, `To address
+...`, `we propose`), and operation/result linkage (`In this way`). The dominant
+addition marker is sentence-initial `Besides` (13 of 15 papers); `Moreover`,
+`Furthermore`, and `In addition` vary from paper to paper. Treat this as a
+relative profile, not a quota.
 
 ### Task or scope transition
 
-- `Generally, ...` gives an operational task definition after brief context.
-- `In this paper, we focus on ...` narrows from the broad task to the studied
-  setting.
-- `Here, ... denotes ...` defines a local term without interrupting the flow.
+- `In general, ...` gives an operational task definition after brief context.
+  The older papers in the corpus use `Generally, ...` for the same job; the
+  2025-2026 papers have dropped it.
+- `In this paper, we focus on ...` / `This paper focuses on ...` narrows from
+  the broad task to the studied setting.
+- `Here, ... denotes ...` / `Here, ... are called ...` defines a local term
+  without interrupting the flow, usually right after the figure walk-through.
 
 Use these near the start of an Introduction or problem formulation, not in every
 section.
@@ -124,9 +129,15 @@ additional contrast marker may be unnecessary.
 - `Motivated by this observation, we ...` requires an actual preceding empirical
   or conceptual observation.
 - `Following this idea, we ...` converts a stated insight into a design.
+- `To achieve the above idea, we propose METHOD` / `Following the above idea,
+  we propose METHOD` closes an insight paragraph and opens the method preview.
+  The corpus regularly separates the two steps: one paragraph states the idea
+  and why it resolves the cause; the next begins with this pivot and names the
+  method. `For implementation, we ...` marks the same idea-to-instantiation
+  step inside the Method.
 
-Do not use `To this end` before the “end” is visible. Do not use all four forms in
-one short section.
+Do not use `To this end` before the “end” is visible. Do not stack several of
+these pivots in one short section.
 
 ### Mechanism elaboration and sequence
 
@@ -137,8 +148,9 @@ one short section.
 - `Meanwhile, ...` indicates concurrent or complementary behavior, not generic
   addition.
 - `Besides / In addition / Furthermore / Moreover` adds a distinct component or
-  argument. Prefer `In addition` in neutral prose; retain `Besides` only when the
-  surrounding style supports it.
+  argument. Sentence-initial `Besides` is the corpus's own habit, but it reads
+  informal to some reviewers; prefer `In addition` in neutral prose and use
+  `Besides` when the user asks for close imitation.
 
 Use `Specifically` once to open a mechanism block, then let scientific subjects
 carry subsequent sentences. Avoid starting every module sentence with a
@@ -155,6 +167,23 @@ connective.
 
 Use `Therefore` or `Thus` only for a real inference. `In this way` should point to
 a just-described operation, not vaguely summarize a paragraph.
+
+### Formalization, intuition, and clarification
+
+- `Formally, ...` moves from a prose description to the definition, notation,
+  or objective that pins it down. It opens the task formulation in nearly
+  every reference paper and introduces borrowed theory in its general form
+  (`Formally, the objective is ...`).
+- `Intuitively, ...` states the plain-language reading of a mechanism, an
+  objective, or an example before or after the formal statement. The pair
+  `Intuitively, ... Formally, ...` is a recognizable rhythm; do not let the
+  intuitive sentence repeat the formal one in words.
+- `Note that ...` inserts a scoping caveat, a design difference from a cited
+  method, or a boundary the reader would otherwise miss (`Note that the encoder
+  is shared across sources, so ...`). Use it for facts that qualify the
+  preceding statement, not for new claims.
+- `For simplicity, ...` justifies an omission or a simplifying assumption
+  (dropping a subscript, fixing a distribution). State what is dropped.
 
 ### Evidence and qualification
 
@@ -232,8 +261,10 @@ To this end, we propose [METHOD], which [core mechanism] to [desired outcome].
 [METHOD] consists of [only the major components], each addressing [mapped need].
 ```
 
-Expand the acronym once. Prefer `termed METHOD`, `called METHOD`, or direct
-apposition; avoid the unidiomatic `termed as METHOD`.
+Expand the acronym once. Prefer `termed METHOD`, `namely METHOD`, or direct
+apposition; avoid the unidiomatic `termed as METHOD`. The corpus's 2020-2024
+papers write `termed as`; its 2026 papers use `termed X` and `namely X`, so
+the recommendation follows the corpus's own later usage.
 
 ### Component rationale and operation
 
@@ -348,6 +379,14 @@ question/comparison scope -> overall pattern -> representative evidence ->
 mechanism-based interpretation -> exception or boundary
 ```
 
+A common surface form in the corpus is the enumerated observation list:
+`From Table 2, we can observe that: (1) [pattern across the strongest
+baselines] ... (2) [pattern under the diagnostic condition] ... (3)
+[exception] ...`, where each item pairs a pattern with its reason. Use it when
+there are two to four distinct observations; otherwise write continuous prose.
+Attribute an anomaly with hedged wording (`The reason might be that ...`, `We
+assume that ...`) and keep the attribution to one sentence.
+
 Do not enumerate every table cell. Select results that answer the research
 question and discuss anomalies when they affect the claim.
 
@@ -396,6 +435,24 @@ Carry the same conceptual spine through the paper at different resolutions:
 
 Reuse canonical terms but not whole sentences. Each recurrence must add a new
 function: define, motivate, formalize, test, or delimit.
+
+### Parallel axes carried through the paper
+
+Nearly every reference paper decomposes its problem into two or three named,
+parallel axes early in the Introduction and then reuses those axes as the
+organizing principle of the whole manuscript: type-level and instance-level
+correlations, local and global interactions, endogenous, exogenous, and
+consistent information, three overlapping patterns, three memory levels. The
+axes name kinds of information, kinds of failure, or kinds of correlation, not
+modules. Once named, they order the figure panels, the challenge list, the
+components, the contribution bullets, the ablation variants, and the analysis
+subsections (`Impact of type-level correlations`, `Impact of instance-level
+correlations`).
+
+Use this device only when the axes are real and mutually distinct. Name each
+axis once, keep its label fixed, and let every later section refer back to it
+rather than inventing new groupings. Two axes that reduce to one, or a third
+axis added for symmetry, break the device.
 
 ### Information pacing
 
